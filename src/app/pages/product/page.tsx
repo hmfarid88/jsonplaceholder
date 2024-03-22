@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Page = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        axios.get('https://jsonplaceholderbackend.vercel.app/product')
+        axios.get('http://localhost:8000/product')
             .then(res => {
                 if (res?.status === 200) {
                     setProducts(res?.data)
